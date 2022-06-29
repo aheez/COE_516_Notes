@@ -11,17 +11,31 @@
 
 ## Attack Surface
 - **What**
+	- assets
 - **How**
+	- possible ways of attacks
 - **Where**
+	- entry point
 - **Why**
+	- what can be gained (motivation behind the attack)
 
 ## Attack Vectors
 - **Def**: a sequence of attack steps/actions
 
 ## Threat Aspects
 - **Agents/Actors**
+	- Hacker
+	- Network host
+	- insider
 - **Actions**
+	- Code injection
+	- Brute-force 
+	- etc.
 - **Consequence/Outcome**
+	- privilege escalation
+	- access to data
+	- malware installation
+	- MitM
 - **Attack Goal**
 
 ## National Vulnerability Database
@@ -54,3 +68,20 @@ Threaten either the physical integrity or availability of data or devices locate
 ### Definition
 Communication Layer of the IoT system
 ### Outcome
+- Affect the exchange of information between IoT devices and the wider network
+### How
+- MitM
+- DoS
+- RFID cloning
+- traffic Analysis
+
+## Service-Level
+### Definition
+Targets IoT's inherent functionality and services
+- Front-end, Analytics/reporting
+### Outcome
+- Maliciously manage IoT application
+### How
+- Phishing attacks, social engineering
+- Malicious scripts
+- Reverse engineering

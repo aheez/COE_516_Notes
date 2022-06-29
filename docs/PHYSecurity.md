@@ -29,9 +29,11 @@ Using some kind of characteristic in the medium of communication.
 - Along with Intrusion Detection System (IDS), RF fingerprint-based schemes can be used to distinguish devices
 - The RF finger prints are derived from the unique differences obtained by transceivers in the manufacturing process
 - This leads to unique features that can be used to differentiate transceivers such as frequency deviation
+- Require protocol support
 
 ### Spread Spectrum (SS) Coding
 - Performed though pseudo-random operations such as hopping between frequency channels in FHSS
+- Require protocol support
 - CSS is used in LoRa networks and does not introduce pseudo-random elements to aid in disguising signals
 
 ### Beam-forming
@@ -42,6 +44,7 @@ Using some kind of characteristic in the medium of communication.
 	- Used by IoT devices while simultaneously canceling it and exchanging secret keys for encryption
 	- No prior knowledge on the location of an adversary is needed
 - Cooperative Jamming (CJ):
-	- Uses 3rd device to actively targets adversaries in order interfere with their attemps
+	- Uses 3rd device to actively targets adversaries in order interfere with their attempts
 	- Precoding techniques are used to not affect the communication between legitimate devices
-	- 
+	- It also requires that the jammer and controller both have antenna arrays as well as actuator's and adversaries' Channel State Information (CSI)
+	* It does not require a specific protocol
