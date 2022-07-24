@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Technology Selection - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#technology-selection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Technology Selection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Obsidian Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntrusionDetection/" class="md-nav__link">
+        Intrusion Detection Systems (IDS)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kitsune/" class="md-nav__link">
+        Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec1/" class="md-nav__link">
+        IoT Definitions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec2/" class="md-nav__link">
+        IoT Landscape and Anatomy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec3/" class="md-nav__link">
+        IoT Vulnerabilities & Attacks
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec5/" class="md-nav__link">
+        Device Level Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PHYSecurity/" class="md-nav__link">
+        Physical Layer Security
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Technology Selection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Technology Selection
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mcus-and-socs" class="md-nav__link">
+    MCUs and SoCs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-operating-systems-rtos" class="md-nav__link">
+    Real-Time Operating Systems (RTOS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iot-relationship-platforms" class="md-nav__link">
+    IoT Relationship Platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptographic-security-apis" class="md-nav__link">
+    Cryptographic Security APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-and-authorization" class="md-nav__link">
+    Authentication and Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-monitoring" class="md-nav__link">
+    Security Monitoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ThreatModeling/" class="md-nav__link">
+        IoT Threat Modeling
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mcus-and-socs" class="md-nav__link">
+    MCUs and SoCs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-operating-systems-rtos" class="md-nav__link">
+    Real-Time Operating Systems (RTOS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iot-relationship-platforms" class="md-nav__link">
+    IoT Relationship Platforms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptographic-security-apis" class="md-nav__link">
+    Cryptographic Security APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-and-authorization" class="md-nav__link">
+    Authentication and Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-monitoring" class="md-nav__link">
+    Security Monitoring
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="technology-selection">Technology Selection<a class="headerlink" href="#technology-selection" title="Permanent link">&para;</a></h1>
+<h2 id="mcus-and-socs">MCUs and SoCs<a class="headerlink" href="#mcus-and-socs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Based on functional requirements of the IoT device</li>
+<li>Considerations:<ul>
+<li>Cryptographic bootloader</li>
+<li>Cryptographic HW accelerator</li>
+<li>Secure memory protection</li>
+<li>Built-in tamper protection</li>
+<li>Protection against reverse engineering</li>
+<li>Secure mechanisms in nonvolatile memory</li>
+<li>Test/Debug ports protection</li>
+</ul>
+</li>
+</ul>
+<h2 id="real-time-operating-systems-rtos">Real-Time Operating Systems (RTOS)<a class="headerlink" href="#real-time-operating-systems-rtos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>RTOS Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Safety-Critical</td>
+<td>Safety Certifications</td>
+</tr>
+<tr>
+<td>Industrial</td>
+<td>Reliability and Security</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>Process Separation &amp; additional Sec.</td>
+</tr>
+<tr>
+<td>Consumer</td>
+<td>Performance and usability</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iot-relationship-platforms">IoT Relationship Platforms<a class="headerlink" href="#iot-relationship-platforms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Solutions that support security features besides functional capabilities</li>
+<li>Used to build:<ul>
+<li>Asset management functions</li>
+<li>Authentication and Authorization</li>
+<li>Monitoring functions</li>
+</ul>
+</li>
+</ul>
+<h2 id="cryptographic-security-apis">Cryptographic Security APIs<a class="headerlink" href="#cryptographic-security-apis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Are called in the following instances:<ul>
+<li>Application data<ul>
+<li>Encryption</li>
+<li>Authentication</li>
+<li>Integrity protection</li>
+</ul>
+</li>
+<li>Network data/packet<ul>
+<li>Same as App data $\uparrow$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Issues to <em>take into consideration</em>:<ul>
+<li>The need of secure communication to protect all application data "<em>end-to-end</em>"</li>
+<li>Whether intermediate systems need access to data "<em>point-to-point</em>"</li>
+<li>Whether security protection is only for data located on the device "<em>internal storage</em>"</li>
+</ul>
+</li>
+</ul>
+<h2 id="authentication-and-authorization">Authentication and Authorization<a class="headerlink" href="#authentication-and-authorization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The solution choice heavily depends on the deployment design</li>
+<li>Examples/Notes:<ul>
+<li>AWS Identity and Access Management (IAM) service to manage certificates</li>
+<li>X.509 certificats</li>
+<li>AWS SigV4</li>
+<li>X.509 for MQTT for authenticating devices</li>
+<li>Avoid using SSL for large scale IoT projects because they are not practical</li>
+<li>Use IoT-specific certificates</li>
+<li>Consider vendors that support <strong>Identity Relation Management (IRM)</strong></li>
+</ul>
+</li>
+<li>Another option is building your own security infrastructure<ul>
+<li>Very risky and should be attempted by organizations with considerable experience designing and securely deploying these infrastructures</li>
+</ul>
+</li>
+</ul>
+<h2 id="security-monitoring">Security Monitoring<a class="headerlink" href="#security-monitoring" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It is very difficult </li>
+<li>Use third party vendors and establish SLA with them </li>
+</ul>
+<h1 id="safety-and-security-design">Safety and Security Design<a class="headerlink" href="#safety-and-security-design" title="Permanent link">&para;</a></h1>
+<h2 id="threat-modeling"><a href="../ThreatModeling/">Threat Modeling</a><a class="headerlink" href="#threat-modeling" title="Permanent link">&para;</a></h2>
+<h2 id="privacy-impact-assessment-pia">Privacy Impact Assessment <strong>PIA</strong><a class="headerlink" href="#privacy-impact-assessment-pia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Determine mitigations that must be included in the system design</li>
+<li>Determine any third-party agreement (SLA)</li>
+<li>For systems that store Privacy Protected Information (PPI), PIA will inform the design process as follows:<ul>
+<li>Provisioning of the device may require admin approval</li>
+<li>Internal audit or compliance should be conducted to check the viability of storing PPI on the IoT device</li>
+<li>Encryption of the data on the device should be sufficient</li>
+<li>Data transmitted from/to the device should be encrypted</li>
+<li>Access to the device should be restricted to authorized personal</li>
+<li>End user should be aware of the use, transfer, disposal of PPI</li>
+</ul>
+</li>
+<li>Link PIA outcomes to system requirements baseline, establish SLAs</li>
+</ul>
+<h2 id="safety-impact-assessment">Safety Impact Assessment<a class="headerlink" href="#safety-impact-assessment" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Items needs to be addressed:
+        1. Is there anything harmful that could happen if the device stopped working? "<em>DoS Attack</em>"
+        2. If the device is not safety critical, is there any device or service that depends on it?
+        3. How could potential harm (from device failure) be minimized or avoided?
+        4. What issues might others consider safety-related or harmful?
+        5. Are there any other similar or related deployments that have been considered safety relevant or have done harm?</li>
+<li>It should take into consideration the various malfunctions or misbehaviors resulting from a device's vulnerabilities and possible compromises</li>
+</ul>
+<h2 id="compliance">Compliance<a class="headerlink" href="#compliance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Depends on the specific industry regulatory environment </li>
+<li>It is critical to examine <strong>all of </strong> the physical and logical points of connection in the IoT deployment</li>
+<li>Some Compliance Regimens:<ul>
+<li>PCI (Payment Card Industry)</li>
+<li>NERC (North America Electric Reliability Corp.)</li>
+<li>USPS (US Postal Service)</li>
+<li>SAE (Society of Automation Eng.)</li>
+<li>NIST (National Institutes for Standards and Technology)</li>
+<li>HIPPA</li>
+</ul>
+</li>
+</ul>
+<h2 id="monitoring-for-compliance">Monitoring for Compliance<a class="headerlink" href="#monitoring-for-compliance" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Pwnie</strong> Provides security engineers with the ability to validate:<ul>
+<li>Policies</li>
+<li>Configurations</li>
+<li>Controls</li>
+</ul>
+</li>
+</ul>
+<h2 id="security-system-integration">Security System Integration<a class="headerlink" href="#security-system-integration" title="Permanent link">&para;</a></h2>
+<p>This implies that devices can securely provision identities, credentials, undergo testing, monitoring, audit, and be securely upgraded</p>
+<p>Artifacts from <a href="../ThreatModeling/">threat modeling</a>, <a href="#privacy-impact-assessment-pia">PIA</a>, <a href="#safety-impact-assessment">SIA</a> and <a href="#compliance">compliance</a> should be used as inputs into an overarching IoT security system design.</p>
+<h3 id="secure-bootstrap">Secure Bootstrap<a class="headerlink" href="#secure-bootstrap" title="Permanent link">&para;</a></h3>
+<p>It concerns the process associated with initial provisioning of passwords, credentials...</p>
+<p>Security process necessary to ensure that a new device undergoes the following:
+- Receives a secure configuration that complies to a security policy
+- Receives knowledge of its network, subnet, protocols, ports ...etc.
+- Receives knowledge of the network and backend (trust anchors and paths) <em>installing cryptographic keys</em>
+- Register its identity to the network</p>
+<h3 id="accounts-and-credentials">Accounts and Credentials<a class="headerlink" href="#accounts-and-credentials" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Consider the IoT devices's identity management in the larger enterprise</li>
+<li>Comes after provisioning of certificates</li>
+</ul>
+<h3 id="patching-and-update">Patching and Update<a class="headerlink" href="#patching-and-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Concerns how SW and FW are provisioned to IoT devices</li>
+<li>Musts for OTA activation and updating:<ul>
+<li>End-to-End SW/FW integrity and auth (in many cases confidentiality may also be needed)</li>
+<li>The patching available for highly privileged roles and identities</li>
+</ul>
+</li>
+</ul>
+<h3 id="audit-and-monitoring">Audit and Monitoring<a class="headerlink" href="#audit-and-monitoring" title="Permanent link">&para;</a></h3>
+<p>Concerns the enterprise security systems and their ability to capture and analyze for anomalies</p>
+<h1 id="process-and-agreement">Process and Agreement<a class="headerlink" href="#process-and-agreement" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Putting the right process and procedures in place is required to establish a strong security foundation</p>
+</blockquote>
+<h2 id="secure-acquisition-process">Secure Acquisition Process<a class="headerlink" href="#secure-acquisition-process" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Layout rules for acquiring new IoT devices</li>
+</ul>
+<h2 id="secure-update-process">Secure Update Process<a class="headerlink" href="#secure-update-process" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Design a secure update process</li>
+<li>Include the operational testing of updates and patches</li>
+</ul>
+<h2 id="establish-slas">Establish SLAs<a class="headerlink" href="#establish-slas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Include security objectives in SLAs with IoT vendors:<ul>
+<li>Time to patch after a new critical update is available</li>
+<li>The time to respond to an incident involving the device</li>
+<li>IoT device availability</li>
+<li>How the vendor handles privacy of data</li>
+<li>Compliance targets</li>
+<li>Incident response functions and collaboration agreements</li>
+<li>How the vendor handles confidentiality of the data</li>
+<li>Cloud SLA</li>
+</ul>
+</li>
+</ul>
+<h2 id="establish-privacy-agreements">Establish Privacy Agreements<a class="headerlink" href="#establish-privacy-agreements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Artifacts from <a href="#threatmodeling">threat modeling</a> should be used to understand the flow of data across all organizations, and agreements should be drawn up by all organizations involved in those data flows</li>
+<li>Content example of privacy agreement:<ul>
+<li>How the data will be processed</li>
+<li>What regulations the data transfers fall under</li>
+<li>...etc</li>
+</ul>
+</li>
+</ul>
+<h2 id="consider-new-liabilities-and-guard-against-risk-exposure">Consider new liabilities and guard against risk exposure<a class="headerlink" href="#consider-new-liabilities-and-guard-against-risk-exposure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>IoT is focused on network-enabled physical objects</li>
+<li>Organizations must begin to consider what new liability connected devices may introduce</li>
+</ul>
+<h2 id="establish-an-iot-physical-security-plan">Establish an IoT physical security plan<a class="headerlink" href="#establish-an-iot-physical-security-plan" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Spend time understanding the physical security needs of an IoT implementation</li>
+<li>It impacts architectural design, policies, and procedures and even technology acquisition approaches</li>
+<li>The output from the threat model should guide the plan creation and take into account IoT assets are placed in exposed location</li>
+<li>Deployment of monitoring solution</li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../PHYSecurity/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Physical Layer Security" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Physical Layer Security
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ThreatModeling/" class="md-footer__link md-footer__link--next" aria-label="Next: IoT Threat Modeling" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              IoT Threat Modeling
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

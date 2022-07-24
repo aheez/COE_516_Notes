@@ -1,0 +1,1027 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection - obsidian-mkdocs template</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kitsune-an-ensemble-of-autoencoders-for-online-network-intrusion-detection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="obsidian-mkdocs template" class="md-header__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="obsidian-mkdocs template" class="md-nav__button md-logo" aria-label="obsidian-mkdocs template" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    obsidian-mkdocs template
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Obsidian Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntrusionDetection/" class="md-nav__link">
+        Intrusion Detection Systems (IDS)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#online" class="md-nav__link">
+    Online
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupervised" class="md-nav__link">
+    Unsupervised
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-complexity" class="md-nav__link">
+    Low Complexity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anns" class="md-nav__link">
+    ANNs
+  </a>
+  
+    <nav class="md-nav" aria-label="ANNs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-1" class="md-nav__link">
+    Al 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-2" class="md-nav__link">
+    Al 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoencoders" class="md-nav__link">
+    Autoencoders
+  </a>
+  
+    <nav class="md-nav" aria-label="Autoencoders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection-with-autoencoders" class="md-nav__link">
+    Anomaly Detection with Autoencoders
+  </a>
+  
+    <nav class="md-nav" aria-label="Anomaly Detection with Autoencoders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-phase" class="md-nav__link">
+    Training phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-phase" class="md-nav__link">
+    Execution phase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packet-capturer" class="md-nav__link">
+    Packet Capturer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-parser" class="md-nav__link">
+    Packet Parser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-extractor-fe" class="md-nav__link">
+    Feature Extractor (FE)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-mapper-fm" class="md-nav__link">
+    Feature Mapper (FM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detector-ad" class="md-nav__link">
+    Anomaly Detector (AD)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kitsune" class="md-nav__link">
+    Kitsune
+  </a>
+  
+    <nav class="md-nav" aria-label="Kitsune">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-extractor-fe_1" class="md-nav__link">
+    #Feature Extractor FE
+  </a>
+  
+    <nav class="md-nav" aria-label="#Feature Extractor FE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damped-statistics" class="md-nav__link">
+    Damped Statistics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec1/" class="md-nav__link">
+        IoT Definitions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec2/" class="md-nav__link">
+        IoT Landscape and Anatomy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec3/" class="md-nav__link">
+        IoT Vulnerabilities & Attacks
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec5/" class="md-nav__link">
+        Device Level Threats
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PHYSecurity/" class="md-nav__link">
+        Physical Layer Security
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security%20Engineering/" class="md-nav__link">
+        Technology Selection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ThreatModeling/" class="md-nav__link">
+        IoT Threat Modeling
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#online" class="md-nav__link">
+    Online
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupervised" class="md-nav__link">
+    Unsupervised
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-complexity" class="md-nav__link">
+    Low Complexity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anns" class="md-nav__link">
+    ANNs
+  </a>
+  
+    <nav class="md-nav" aria-label="ANNs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-1" class="md-nav__link">
+    Al 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#al-2" class="md-nav__link">
+    Al 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoencoders" class="md-nav__link">
+    Autoencoders
+  </a>
+  
+    <nav class="md-nav" aria-label="Autoencoders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection-with-autoencoders" class="md-nav__link">
+    Anomaly Detection with Autoencoders
+  </a>
+  
+    <nav class="md-nav" aria-label="Anomaly Detection with Autoencoders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-phase" class="md-nav__link">
+    Training phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-phase" class="md-nav__link">
+    Execution phase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packet-capturer" class="md-nav__link">
+    Packet Capturer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-parser" class="md-nav__link">
+    Packet Parser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-extractor-fe" class="md-nav__link">
+    Feature Extractor (FE)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-mapper-fm" class="md-nav__link">
+    Feature Mapper (FM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detector-ad" class="md-nav__link">
+    Anomaly Detector (AD)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kitsune" class="md-nav__link">
+    Kitsune
+  </a>
+  
+    <nav class="md-nav" aria-label="Kitsune">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-extractor-fe_1" class="md-nav__link">
+    #Feature Extractor FE
+  </a>
+  
+    <nav class="md-nav" aria-label="#Feature Extractor FE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damped-statistics" class="md-nav__link">
+    Damped Statistics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="kitsune-an-ensemble-of-autoencoders-for-online-network-intrusion-detection">Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection<a class="headerlink" href="#kitsune-an-ensemble-of-autoencoders-for-online-network-intrusion-detection" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Based on ANNs</p>
+</blockquote>
+<h2 id="online">Online<a class="headerlink" href="#online" title="Permanent link">&para;</a></h2>
+<ul>
+<li>After the training or executing the model with an instance, the instance is immediately discarded</li>
+</ul>
+<h2 id="unsupervised">Unsupervised<a class="headerlink" href="#unsupervised" title="Permanent link">&para;</a></h2>
+<h2 id="low-complexity">Low Complexity<a class="headerlink" href="#low-complexity" title="Permanent link">&para;</a></h2>
+<h2 id="anns">ANNs<a class="headerlink" href="#anns" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weight</td>
+<td>$$W$$</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>$$l$$</td>
+</tr>
+<tr>
+<td>Bias</td>
+<td>$$b$$</td>
+</tr>
+</tbody>
+</table>
+<p>$$
+\theta \equiv (W,b)
+$$
+$\overrightarrow{x}$  is the normalized input vector (i.e., between [-1, 1]) using zscore normalization.</p>
+<p>Let $\overrightarrow{a}^{(i)}$ be the $||l^{(i)}||$ vector of output from the neurons $l^{(i)}$
+$$
+\overrightarrow{a}^{i+1} = f (W^{(i)} . a\overrightarrow{a}^{(i)} + b^{(i)})
+$$
+Where $f$ is the neurons activation function (eg, sigmoid function)
+$$
+f (\overrightarrow{x}) = \frac{1}{1+e^\overrightarrow{x}}
+$$</p>
+<p>The output of the last layer is denoted as $\overrightarrow{y^<code>} = \overrightarrow{a}^{(L)}$ 
+Let $h$ be the full layer-wise forward propagation from the inout $\overrightarrow{x}$  until the final output $\overrightarrow{y^</code>}$, denoted </p>
+<p>$$
+h_\theta(\overrightarrow{x}) = \overrightarrow{y^`}
+$$</p>
+<h3 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Training data set $X$ and the expected output set $Y$, where $\overrightarrow{x}\in X$ and $\overrightarrow{y}\in Y$</li>
+<li>Back propagation step is denoted as the function $b_\theta = (Y,Y^`)$</li>
+<li>Given some execution of $h_\theta$, let $A$ be every  neuron's activation and $\Delta$ be the activation errors of all neurons.</li>
+</ul>
+<h3 id="al-1">Al 1<a class="headerlink" href="#al-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Given the current $A$ and $\Delta$, and a set learning rate $l \in (0, 1]$</li>
+<li>This is referred to as batch-processing</li>
+<li>Both $W$ and $b$ are optimized by Gradient Descent (GD) algorithm
+<img alt="Pasted image 20220724065430.png" src="../Pasted%20image%2020220724065430.png" /></li>
+</ul>
+<h3 id="al-2">Al 2<a class="headerlink" href="#al-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Stochastic GD (SGD)
+<img alt="Pasted image 20220724070516.png" src="../Pasted%20image%2020220724070516.png" /></li>
+</ul>
+<blockquote>
+<p>The difference between GD and SGD is that GD converges on an optimum better than SGD, but SGD initially converges initially converges faster</p>
+</blockquote>
+<h2 id="autoencoders">Autoencoders<a class="headerlink" href="#autoencoders" title="Permanent link">&para;</a></h2>
+<ul>
+<li>It tries to learn the function $h_\theta (\overrightarrow{x}) \approx \overrightarrow{x}$</li>
+<li>If the autoencoder is symmetric in layer sizes it can be used for decoding</li>
+<li>Root Mean Square Error (RSME)
+$$
+\operatorname{RMSE} = \sqrt{\frac{\sum _{i=1}^n (x_i-y_i)^2}{n}}
+$$</li>
+</ul>
+<h3 id="anomaly-detection-with-autoencoders">Anomaly Detection with Autoencoders<a class="headerlink" href="#anomaly-detection-with-autoencoders" title="Permanent link">&para;</a></h3>
+<p>Let:
+- $\phi$  be the anomaly threshold with initial value of -1
+- $\beta \in [1, \infty)$ sensitivity parameter</p>
+<h4 id="training-phase">Training phase<a class="headerlink" href="#training-phase" title="Permanent link">&para;</a></h4>
+<p>For each instance $x_i$ in the training set $X$
+1. Execute $s = \operatorname{RMSE}(\overrightarrow{x}, h_\theta(\overrightarrow{x}))$
+2. Update: if $(s \geq \phi)$ then $\phi \leftarrow s$
+3. Train: update $\phi$ by learning from $x_i$</p>
+<h4 id="execution-phase">Execution phase<a class="headerlink" href="#execution-phase" title="Permanent link">&para;</a></h4>
+<p>When an unseen instance $\overrightarrow{x}$ arrives:
+1. Execute: $s = \operatorname{RMSE}(\overrightarrow{x}, h_\theta(\overrightarrow{x}))$
+2. Verdict: if $(s \geq \phi\beta)$ then generate <strong>ALERT</strong></p>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p><img alt="Pasted image 20220724084000.png" src="../Pasted%20image%2020220724084000.png" />
+- Features are mapped to visible neurons of the ensemble
+- The autoencoders attempts to reconstruct the instance's features and compute the error in terms of Root Mean Square Error (RMSE)
+- The RMSEs are forwarded to an output autoencoder, which acts as a non-linear voting mechanism for the ensemble</p>
+<h3 id="packet-capturer">Packet Capturer<a class="headerlink" href="#packet-capturer" title="Permanent link">&para;</a></h3>
+<p><img alt="Pasted image 20220724083946.png" src="../Pasted%20image%2020220724083946.png" />
+- Acquiring the raw packets
+- Examples: tshark, NFQueue</p>
+<h3 id="packet-parser">Packet Parser<a class="headerlink" href="#packet-parser" title="Permanent link">&para;</a></h3>
+<p><img alt="Pasted image 20220724083934.png" src="../Pasted%20image%2020220724083934.png" />
+- To obtain the meta information required be <a href="#feature-extractor-fe"> (FE)</a>
+- Example: Packet++, tshark</p>
+<h3 id="feature-extractor-fe">Feature Extractor (FE)<a class="headerlink" href="#feature-extractor-fe" title="Permanent link">&para;</a></h3>
+<p><img alt="Pasted image 20220724083839.png" src="../Pasted%20image%2020220724083839.png" />
+- The component responsible for extracting $n$ features from the arriving packets to create the instance $\overrightarrow{x} \in \mathbb{R}^n$
+- The features of $\overrightarrow{x}$ describe the packet</p>
+<h3 id="feature-mapper-fm">Feature Mapper (FM)<a class="headerlink" href="#feature-mapper-fm" title="Permanent link">&para;</a></h3>
+<p><img alt="Pasted image 20220724084026.png" src="../Pasted%20image%2020220724084026.png" />
+- Forms a set of of smaller instances $(v)$ from $\overrightarrow{x}$ and passing $v$ to <a href="#anomaly-detector-ad"> AD</a>
+- Learns the mapping from $\overrightarrow{x}$ to $v$
+- The map groups features of $\overrightarrow{x}$ into sets with maximum size of $m$ each
+- Nothing is passed to <a href="#anomaly-detector-ad"> AD</a> until the map is complete
+- At the end of the train-mode the map is passed to <a href="#anomaly-detector-ad"> AD</a>
+- The learned mapping is used to form a collection of small instances $v$ from $\overrightarrow{x}$, which is then passed to the respective autoencoders in the ensemble layer of the <a href="#anomaly-detector-ad"> AD</a></p>
+<h3 id="anomaly-detector-ad">Anomaly Detector (AD)<a class="headerlink" href="#anomaly-detector-ad" title="Permanent link">&para;</a></h3>
+<p><img alt="Pasted image 20220724085018.png" src="../Pasted%20image%2020220724085018.png" />
+- Responsible for detecting abnormal packets given a packet's representation $v$
+- The RMSE of the forward propagation is then used to train the output layer
+- The largest RMSE of the output layer is set as $\phi$  and stored for later use
+- In testing, $v$ is executed across all layers, and if the output layer RMSE exceeds $\phi\beta$, an alert is logged with packet detailed
+- The original packet, $\overrightarrow{x}$ and $v$ are discarded</p>
+<h2 id="kitsune">Kitsune<a class="headerlink" href="#kitsune" title="Permanent link">&para;</a></h2>
+<h3 id="feature-extractor-fe_1"><a href="#feature-extractor-fe">#Feature Extractor FE</a><a class="headerlink" href="#feature-extractor-fe_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use incremental Statistics maintained over a damped window</li>
+<li>Which means the extracted features are temporal </li>
+</ul>
+<h4 id="damped-statistics">Damped Statistics<a class="headerlink" href="#damped-statistics" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Statistics whose computation involves one and two incremental statistics are referred to as 1D and 2D statistics respectively.</li>
+<li>Maintains a tuple: $\mathrm{IS} := (N,LS,SS)$, where $N,\ LS\mathrm{and}\ SS$ are the number, linear sum and squared sum of instances seen respectively</li>
+<li>Update procedure for inserting $x_i$ into $\mathrm{IS} \leftarrow (N+1, LS+x_i + SS +x_i^2)$</li>
+<li>The statistics at any given time are:
+$$
+\mu_S = \frac{LS}{N}, \ \ \sigma_S^2 = \Bigg|\frac{SS}{N}-\left(\frac{LS}{N}\right)^2\Bigg|, \ \ \sigma_S = \sqrt{\sigma_S^2}
+$$</li>
+<li>In damped window model, the weights of older values are exponentially decreased over time using a decay function $d_\lambda(t) = 2 ^{-\lambda t}$, where $\lambda &gt; 0$ </li>
+<li>The tuple of a damped incremental statistics is defined as:
+$$\mathrm{IS}<em>{i,\lambda}:= (w, LS,SS,SR</em>{i,j},T_{last})$$</li>
+<li>Where:<ul>
+<li>$w$ is the current weight</li>
+<li>$T_{last}$ is the timestamp of the last update of $\mathrm{IS}<em>{i,\lambda}$ and $SR</em>{i,j}$ is the sum of residual products between streams $i$ and $j$</li>
+</ul>
+</li>
+<li>To update $\mathrm{IS}<em>\lambda$ with $x</em>{cur}$ at time $t_{cur}$, Algorithm 3 is preformed</li>
+</ul>
+<p><img alt="Pasted image 20220724093512.png" src="../Pasted%20image%2020220724093512.png" /></p>
+<p><img alt="Pasted image 20220724111209.png" src="../Pasted%20image%2020220724111209.png" /></p>
+<ul>
+<li>Whenever a packet arrives we extract a behavioral snapshot</li>
+<li>The snapshot consist of 115 traffic statistics capturing a small window into:<ol>
+<li>Packet sender in general</li>
+<li>The traffic between the packet's sender and receiver</li>
+</ol>
+</li>
+<li>The statistics summarize all of the traffic:<ul>
+<li>Source MAC and IP address (SrcMAC-IP)</li>
+<li>Source IP (SrcIP)</li>
+<li>sent between a given packet's source and destination IPs (Channel)</li>
+<li>sent between a given packet's source and destination TCP/UDP socket (Socket)</li>
+</ul>
+</li>
+<li>A total of 23 features can be extracted from a single time window $\lambda$</li>
+<li>Five time windows:<ul>
+<li>100ms</li>
+<li>500ms</li>
+<li>1.5sec</li>
+<li>10sec</li>
+<li>1min</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Pasted image 20220724111347.png" src="../Pasted%20image%2020220724111347.png" /></p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../IntrusionDetection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intrusion Detection Systems (IDS)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Intrusion Detection Systems (IDS)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Lec1/" class="md-footer__link md-footer__link--next" aria-label="Next: IoT Definitions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              IoT Definitions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
